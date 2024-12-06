@@ -41,6 +41,7 @@ if [ -n "$(env | grep "DAVFS2_")" ]; then
             echo "$OPT_NAME $VAL" >> /etc/davfs2/davfs2.conf
         fi
     done
+    sed -i 's/# ignore_dav_header 0/ignore_dav_header 1/g' /etc/davfs2/davfs2.conf
 fi
 
 # Create destination directory if it does not exist.
