@@ -1,4 +1,4 @@
-FROM alpine:3.19.1
+FROM registry.cn-hangzhou.aliyuncs.com/aliyun252/alpine
 
 # Metadata
 LABEL MAINTAINER=efrecon+github@gmail.com
