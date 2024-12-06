@@ -103,15 +103,17 @@ chmod +x *.sh
 docker build -t webdav-client .
 
 docker run -d  \
-	--name webdav-client \
+    --name webdav-client \
     --device /dev/fuse \
-	 --cap-add SYS_ADMIN \
-	 --security-opt "apparmor=unconfined" \
-    --env "WEBDRIVE_USERNAME=123456@qq.com" \
-    --env "WEBDRIVE_PASSWORD=123456" \
-    --env "WEBDRIVE_URL=https://dav.jianguoyun.com/dav/HOME"  \
-    -v /jianguo:/mnt/webdrive:rshared \
+    --cap-add SYS_ADMIN \
+    --security-opt "apparmor=unconfined" \
+    --env "WEBDRIVE_USERNAME=252666671@qq.com" \
+    --env "WEBDRIVE_PASSWORD=anfa9rmciuua85y3" \
+    --env "WEBDRIVE_URL=https://dav.jianguoyun.com/dav/Dell"  \
+    --env "DAVFS2_ASK_AUTH=0" \
+    -v /root/jianguo:/mnt/webdrive:rshared \
 webdav-client
+
 ```
 
 
